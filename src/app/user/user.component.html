@@ -3,8 +3,12 @@
   <p>
     Bienvenida, {{username}}
   </p>
+  <img
+    (click)="greet()"
+    src="https://github.com/glopezh.png" alt="photo" srcset="">
 }@else{
   <p>Inicia sesión !!! </p>
+  <button (click)="isLoggedIn = true">Log In</button>
 }
   <app-games />
 </section>

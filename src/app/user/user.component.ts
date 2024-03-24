@@ -11,5 +11,8 @@ import {GamesComponent} from "../games/games.component";
 })
 export class UserComponent {
   username = 'Geraldine'
-  isLoggedIn = true;
+  isLoggedIn = false; // Funciona como un estado
+  greet(){
+    alert('Hola !!!!!');
+  }
 }
