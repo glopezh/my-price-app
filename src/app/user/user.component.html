@@ -1,1 +1,9 @@
-<p>user works!</p>
+<section>
+@if(isLoggedIn){
+  <p>
+    Bienvenida, {{username}}
+  </p>
+}@else{
+  <p>Inicia sesión !!! </p>
+}
+</section>
