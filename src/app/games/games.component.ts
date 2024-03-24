@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {CommonModule} from "@angular/common";
+import {UserComponent} from "../user/user.component";
 
 @Component({
   selector: 'app-games',
@@ -7,22 +8,17 @@ import {CommonModule} from "@angular/common";
   imports: [CommonModule],
   /*Track te dice cual es el identificador unico*/
   template: `
-    <p>Forma NUEVA de la directiva for de angular</p>
+    <h3>Los juegos favoritos del {{username}}</h3>
     <ul>
     @for (game of games; track game.id){
       <li>{{game.name}}</li>
     }
     </ul>
-    <p>Forma ANTIGUA de la directiva for de angular</p>
-    <ul>
-      <li *ngFor="let game of games">
-        <a href="{{game.id}}">{{game.name}}</a>
-      </li>
-    </ul>
   `,
   styles: ``
 })
 export class GamesComponent {
+  @Input() username ='';
 games = [
   {
     id: 1,
